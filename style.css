@@ -15,7 +15,8 @@ nav {
 }
 
 ul, li {
-    margin: 0; padding: 0; 
+    margin: 1em;
+    padding: 0;
 }
 
 a {
@@ -35,6 +36,10 @@ time {
 
 article, aside {
     display: block;
+}
+
+pre {
+    margin-left: 1em;
 }
 
 .page{
@@ -59,6 +64,15 @@ article, aside {
     max-width: 250px;
     margin: 0 auto;
     height: auto;
+}
+
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
 }
 
 @media (max-width: 52em) {
