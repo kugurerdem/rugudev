@@ -1,4 +1,5 @@
-<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1674950400"><title>https://rugu.dev/</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>My Experience on Switching to Arch Linux</h1><p>About a year ago, I was invited to a pair coding session at the startup where I
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1674950400"><title>My Experience on Switching to Arch Linux |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>My Experience on Switching to Arch Linux</h1><p>About a year ago, I was invited to a pair coding session at the startup where I
 was working. The developers were receiving consultancy from a strange person. At
 one point, he took control of the screen sharing while reviewing some of the
 pull requests that had been made to our codebase. When he shared his screen,
@@ -13,8 +14,8 @@ to have this power.&rsquo; So I have look to <a href=https://gwn.wtf/resume.html
 realized that he was knowledgeable on topics that many developers, including
 myself, struggle with. Influenced by this, I started asking him (he was our
 consultant, after all) as many questions as I could and focused on the resources
-he suggested and the technologies he used.</p><p>The inspiration from this hacker guy, combined with the very precious helps of a
-friend of mine who had a strong interest in operating systems (he uses Arch in
+he suggested and the technologies he used.</p><p>The inspiration from this hacker guy, combined with the very precious help from
+a friend of mine who had a strong interest in operating systems (he uses Arch in
 Qubes OS btw), being libre, and having control over his computer, led me to
 switch to Arch Linux. I have also benefited a lot from discussions on hackernews
 and from youtubers like Luke Smith which I also heard from the Qubes OS friend
@@ -100,15 +101,10 @@ when you are building an environment on a minimalist distribution, your
 awareness of such things tend to increase.</p><h3 id=variety-of-solutions>Variety of Solutions</h3><p>When you want to do something on Linux, there are a lot of alternative programs to let
 you do it. And because of this, one is left with the question &ldquo;which program should one
 prefer first?&rdquo; I must admit that I still often get stunned by this question and
-already lost enough time on it.</p><pre><code>'I am using X as a Window Server Protocol but I heard that Wayland is a newer
-protocol, should I switch to it?'
-
-'A program called pipeware for audio handling is recommended but some suggest
-something called pulseaudio, which one shall I use?'
-
-'Shall I use vim or neovim? I heard that vim is organized by one person whereas
-neovim is more community driven.'
-</code></pre><p>Don’t get me wrong. I am not implying that these questions are meaningless. They
+already lost enough time on it.</p><blockquote><p>&lsquo;I am using X as a Window Server Protocol but I heard that Wayland is a newer
+protocol, should I switch to it?&rsquo;</p><p>&lsquo;A program called pipeware for audio handling is recommended but some suggest
+something called pulseaudio, which one shall I use?&rsquo;</p><p>&lsquo;Shall I use vim or neovim? I heard that vim is organized by one person whereas
+neovim is more community driven.&rsquo;</p></blockquote><p>Don’t get me wrong. I am not implying that these questions are meaningless. They
 are indeed meaningful after a point where small nuances between them start to
 matter.</p><p>I think the best approach here would be to just choose a tool that solves the
 problem without thinking too much and continuing on with what we do. It is a
@@ -145,9 +141,9 @@ rotate them all to the desired orientation using the following code:</p><pre tab
   do
       convert $file -rotate 90 rotated-$file;
   done
-</code></pre></li><li><p>I used <code>youtube-dl</code> to easily download youtube videos and playlists. It
-was one of the most comfortable downloading experiences I had.</p></li><li><p>I used <code>pdfcrop</code> for cropping PDF files.</p></li><li><p>I changed structure of folders that has many files in it by using simple for
-loops alongside with <code>mv cp rm</code></p></li></ul><p>Not to mention how much its easier to install packages that are on AUR or Arch
+</code></pre></li><li><p>I used <code>yt-dlp</code> to easily download youtube videos and playlists. It
+was one of the most comfortable downloading experiences I had.</p></li><li><p>I used <code>pdfcrop</code> for cropping PDF files.</p></li><li><p>I changed the structure of folders that have many files in them by using
+simple for loops alongside with <code>mv cp rm</code></p></li></ul><p>Not to mention how much its easier to install packages that are on AUR or Arch
 Repository compared to installing stuff in Windows.</p><p>Overall, I strongly believe that the power of interacting with programs through
 terminal can increase one&rsquo;s overall productivity.</p><h3 id=arch-linux-manuals>Arch Linux manuals</h3><p>One caveat of using command-line interfaces (CLIs) is that it can be easy to
 forget the specifics of the interface. As a result, it is essential for terminal
@@ -223,7 +219,7 @@ give the same flexibity and ease of use the dvtm gives. There are some
 programs you might want to see running simultaneously through one terminal
 instead in addition to being able to edit/write files. You can do the latter in
 vim, but the former is not so trivial to achieve.</p><p>Since <code>dvtm</code> already solves a problem that vim splits solve, I do not use vim
-splits anyways.</p><p>Here is an example showcase of dvtm:</p><p><img src=https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif#center alt="Example DVTM Showcase"></p><h3 id=file-manager>File Manager</h3><p>I use <code>ranger</code>, considering to switch to <code>lf</code> but also don&rsquo;t see a reason for it
+splits anyways.</p><p>Here is an example showcase of dvtm:</p><p><img src=https://raw.githubusercontent.com/martanne/dvtm/gh-pages/screencast.gif#fullsize alt="Example DVTMShowcase"></p><h3 id=file-manager>File Manager</h3><p>I use <code>ranger</code>, considering to switch to <code>lf</code> but also don&rsquo;t see a reason for it
 since I am already used to <code>ranger</code>.</p><p>As far as I remember the only thing I have changed in ranger is some of the
 priorities on which programs to use when openning files and to enable image
 preview mechanism.</p><p>Before getting used to ranger I was using a file manager with GUI named
