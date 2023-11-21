@@ -6,7 +6,7 @@ tools and protocols used beneath the surface.</p><p>One challenge involved separ
 incoming messages through a specific socket connection.</p></li><li><p>The monitoring process, allowing users to track relevant changes in the state.</p></li></ol><p>To enable communication between these processes, I implemented Inter-Process
 Communication (IPC), and sockets naturally came to mind as a suitable solution.</p><p>Since not all incoming protocol socket messages to the main process were
 relevant to user interaction, I set up a mechanism to filter and process the
-pertinent messages for the front-end perspective. These refined messages were
+relevant messages for the front-end perspective. These refined messages were
 then sent to the monitoring processes through a socket connection.</p><p>However, acknowledging that sockets operate at a low level and suspecting I might
 be overlooking something about the socket protocol, I aimed to confirm that each
 piece of data sent from the main process would result in one received data on
