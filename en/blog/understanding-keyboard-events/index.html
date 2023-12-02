@@ -87,8 +87,8 @@ by examining the Linux source code:
 <a href=https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h>https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h</a></p><p>Moreover, using scripts like xinput as subprocesses under our script might not
 be the optimal approach for implementing an EventEmitter library to listen to
 system-wide keypresses. The conventional way is likely to interact with the X
-server using an X client. Unfortunately, I couldn&rsquo;t build the x11 library on my
-computer and chose not to delve into it much.</p><h2 id=conclusion>Conclusion</h2><p>The series of experimental processes I went through greatly enhanced my
+server using an X library. Unfortunately, I couldn&rsquo;t build the nodeJS x11
+library on my computer and chose not to delve into it much.</p><h2 id=conclusion>Conclusion</h2><p>The series of experimental processes I went through greatly enhanced my
 understanding of what happens behind the scenes when I simply press a key on my
 physical keyboard.</p><p>Returning to the initial scenario I described, when you&rsquo;re developing a
 program, you can act upon the values of key syms or key codes. While the key
