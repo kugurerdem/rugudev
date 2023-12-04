@@ -1,5 +1,6 @@
-<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1701475200"><title>Developer Story: Key Remapping & Keylogging |
-rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Developer Story: Key Remapping & Keylogging</h1><i>Written at 2023-12-02</i><hr><p>In this essay, I describe how I made a Node.js module to listen to keypresses
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1701475200"><title>Developer Story: Understanding Keyboard Events Better |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Developer Story: Understanding Keyboard Events Better</h1><i>Written at 2023-12-02
+- Updated at 2023-12-04</i><hr><p>In this essay, I describe how I made a Node.js module to listen to keypresses
 across the system on Linux machines using X. This experience helped me grasp
 how the OS and Window Managers handle keyboard inputs, clarifying the reasons
 behind an unexpected behavior I had encountered before, which I also mention in
@@ -63,9 +64,9 @@ pressed just by looking at the numbers that xinput gave us? How can we know
 that 38 stands for the key &lsquo;a&rsquo;?</p><p>The numbers provided by xinput are known as X Key Codes. These codes represent
 the physical keys pressed on the X layer. They are essentially similar to Linux
 Input Event Codes, which the Linux Operating System generates to represent the
-physical keys pressed. For reasons I&rsquo;m not aware of, X Key Codes are
-incremented by 8 compared to Linux keycodes (see:
-<a href=https://wiki.archlinux.org/title/Keyboard_input#Identifying_keycodes_in_console)>https://wiki.archlinux.org/title/Keyboard_input#Identifying_keycodes_in_console)</a>.</p><p>Now, the challenge lies in making sense of each X Key Code. We need a mapping
+physical keys pressed. For reasons I&rsquo;m not aware of, <a href=https://wiki.archlinux.org/title/Keyboard_input#Identifying_keycodes_in_console>X Key Codes are
+incremented by 8 compared to Linux
+keycodes</a></p><p>Now, the challenge lies in making sense of each X Key Code. We need a mapping
 between the X Key Codes and their corresponding keys. However, what they
 correspond to can be configured by users. In fact, I&rsquo;ve configured this using
 the command <code>setxkbmap -option "caps:swapescape"</code>. So, although pressing the
@@ -77,14 +78,14 @@ view the mapping between X Key Codes and X KeySyms by running the command
 <code>xmodmap -pke</code>.</p><p>This is essentially what I did in the Node.js module I created to listen to
 keyboard events using X:</p><ol><li><p>Obtain the list of available input devices by running <code>xinput</code> as a
 subprocess.</p></li><li><p>Filter the devices; you don&rsquo;t need all of them, just their IDs.</p></li><li><p>For each ID, run the command <code>xinput test id</code>.</p></li><li><p>Use the result of <code>xmodmap -pke</code> to understand the semantic meaning assigned
-to each physical keypress, known as a KeySym.</p></li></ol><p>If you&rsquo;re curious, you can check out the module I created:
-<a href=https://github.com/kugurerdem/node-xinput-event>https://github.com/kugurerdem/node-xinput-event</a></p><h2 id=probably-a-better-approach>Probably a Better Approach</h2><p>After implementing the module mentioned earlier, I discovered the existence of
+to each physical keypress, known as a KeySym.</p></li></ol><p>If you&rsquo;re curious, you can check out the module I created,
+<a href=https://github.com/kugurerdem/node-xinput-event>Node XInput Events</a>.</p><h2 id=probably-a-better-approach>Probably a Better Approach</h2><p>After implementing the module mentioned earlier, I discovered the existence of
 a Linux utility called showkey that allows listening to pressed keys.</p><p>It&rsquo;s also possible to create a similar script using showkey under the hood. In
 fact, this might have been a better approach compared to what I did above
 because it operates on a more fundamental level than X.</p><p>Similar to how we mapped between X Key Codes and their corresponding X Key
 Codes, we could create a mapping between Linux Event Codes and their meanings
-by examining the Linux source code:
-<a href=https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h>https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h</a></p><p>Moreover, using scripts like xinput as subprocesses under our script might not
+by examining the <a href=https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h>Linux source code for the input event
+codes</a></p><p>Moreover, using scripts like xinput as subprocesses under our script might not
 be the optimal approach for implementing an EventEmitter library to listen to
 system-wide keypresses. The conventional way is likely to interact with the X
 server using an X library. Unfortunately, I couldn&rsquo;t build the nodeJS x11
