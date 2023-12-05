@@ -80,7 +80,7 @@ view the mapping between X Key Codes and X KeySyms by running the command
 keyboard events using X:</p><ol><li><p>Obtain the list of available input devices by running <code>xinput</code> as a
 subprocess.</p></li><li><p>Filter the devices; you don&rsquo;t need all of them, just their IDs.</p></li><li><p>For each ID, run the command <code>xinput test id</code>.</p></li><li><p>Use the result of <code>xmodmap -pke</code> to understand the semantic meaning assigned
 to each physical keypress, known as a KeySym.</p></li></ol><p>If you&rsquo;re curious, you can check out the module I created,
-<a href=https://github.com/kugurerdem/node-xinput-event>Node XInput Events</a>.</p><h2 id=probably-a-better-approach>Probably a Better Approach</h2><p>After implementing the module mentioned earlier, I discovered the existence of
+<a href=https://github.com/kugurerdem/node-xinput-events>Node XInput Events</a>.</p><h2 id=probably-a-better-approach>Probably a Better Approach</h2><p>After implementing the module mentioned earlier, I discovered the existence of
 a Linux utility called showkey that allows listening to pressed keys.</p><p>It&rsquo;s also possible to create a similar script using showkey under the hood. In
 fact, this might have been a better approach compared to what I did above
 because it operates on a more fundamental level than X.</p><p>Similar to how we mapped between X Key Codes and their corresponding X Key
