@@ -29,7 +29,7 @@ seamlessly.</p><p>There were libraries like <code>iohook</code>, but they seemed
 listening to Linux keyboard events in the latest versions of Node.js. Some
 solutions only focused on capturing keyboard events within the current window
 associated with the process.</p><p>I stumbled upon a library called <code>xev-emitter</code> but it didn&rsquo;t provide what I
-needed as it mainly dealt with listening to xevents of a specific X library.</p><p>After some contemplation, I decided to create my own Node.js module using
+needed as it mainly dealt with listening to xevents of a specific X windows.</p><p>After some contemplation, I decided to create my own Node.js module using
 <code>xinput</code> underneath, just for the sake of it and out of curiosity. <code>xinput</code>
 is a Linux tool that allows listening to keyboard events and provides an
 interface to monitor events from connected keyboards.</p><p>For instance, running the command <code>xinput</code> gives me a list of available input
