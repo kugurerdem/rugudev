@@ -70,7 +70,10 @@ pre {
 
 .author-image {
     margin: 0 auto;
-    max-width: 225px;
+    max-width: 208px;
+    width: 100%;
+    height: auto;
+
     display: block;
     width: 100%;
     border-radius: 25%;
