@@ -1,5 +1,6 @@
-<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1702857600"><title>Integrating LLMs into My Environment |
-rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Integrating LLMs into My Environment</h1><i>Written at 2023-12-18</i><hr><p>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1702857600"><title>Incorporating AI Tools Into My Terminal Workflow |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Incorporating AI Tools Into My Terminal Workflow</h1><i>Written at 2023-12-18
+- Updated at 2023-12-19</i><hr><p>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
 It forms an essential part of my routine, as I use it for nearly all my tasks
 involving text. Be it drafting an essay, sending an email, or coding, Neovim is
 my go-to tool.</p><p>Moreover, I have a deep admiration for the UNIX philosophy and its command-line
@@ -16,7 +17,7 @@ and command-line interface programs capable of integrating these AI tools.</p><p
 <a href=https://github.com/github/copilot.vim>plugin</a> available on Neovim.</p><p>However, incorporating ChatGPT into my workflow wasn&rsquo;t as straightforward as I
 had hoped. I looked into several neovim plugins, like
 <a href=https://github.com/jackMort/ChatGPT.nvim>ChatGPT.nvim</a>, which allow
-interaction with ChatGPT through Neovim. However, majority of these plugins
+interaction with ChatGPT through Neovim. However, the majority of these plugins
 seemed like an overkill compared to what I expect from them. They also had many
 features designed to simplify the programming process, a job that Co-pilot
 already handles for me. Additionally, I would want llms to be accessible not
@@ -40,10 +41,14 @@ again, you can create templates for them.</p><div class=highlight><pre tabindex=
 </span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;What are the synonyms of &#34;$input&#34;&#39;</span> --save synonyms
 </span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Create a template for rephrasing text</span>
 </span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;Fix grammar mistakes and rephrase the text: &#34;$input&#34;&#39;</span> --save rephrase
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Create a template for finding titles for given content</span>
+</span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;Recommend 5 titles for the following content: &#34;$input&#34;&#39;</span> --save titleize
 </span></span></code></pre></div><p>You can later use these templates by passing the <code>-t</code> flag to the command.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Rephrase the text which are copiod in your clipboard</span>
 </span></span><span style=display:flex><span>xsel -b | llm -t rephrase
 </span></span></code></pre></div><p>For finding synonyms for a particular word you have in mind:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Find synonyms of the word &#39;serenity&#39;</span>
 </span></span><span style=display:flex><span>echo <span style=color:#e6db74>&#39;serenity&#39;</span> | llm -t synonyms
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Find appropriate titles for your document</span>
+</span></span><span style=display:flex><span>cat vi-llm.md | llm -t titleize
 </span></span></code></pre></div><p>You can also further specify system messages, choose language model you want to
 interact with, and many more things, which you can examine on the
 <a href=https://llm.datasette.io/en/stable/help.html>documentation</a> of the app.</p><h2 id=the-readline-issue>The Readline Issue</h2><p>So, I was quite happy for finding this tool, but the only thing I did not like
@@ -76,7 +81,7 @@ the vim editor without doing any changes. In essence, it operates similarly to
 a chat interface. You type in messages (or commands) which get sent to the LLM
 system, and any response from the LLM system gets displayed back to you. This
 cycle continues, enabling continuous, interactive communication with the LLM
-from your command line.</p><p>Here is a quick showcase:</p><p><img src=https://raw.githubusercontent.com/kugurerdem/vi-llm/master/showcase.gif#center alt=vi-llm-showcase></p><p>If you are interested, you can check out the <a href=https://github.com/kugurerdem/vi-llm>github repo</a></p><h2 id=conclusion>Conclusion</h2><p>I&rsquo;ve been using Copilot and ChatGPT for months and now I am using this tool for
+from your command line.</p><p>Here is a quick showcase:</p><p><img src=https://raw.githubusercontent.com/kugurerdem/vi-llm/master/showcase.gif#center alt=vi-llm-showcase></p><p>If you are interested, you can check out the <a href=https://github.com/kugurerdem/vi-llm>github repo.</a></p><h2 id=conclusion>Conclusion</h2><p>I&rsquo;ve been using Copilot and ChatGPT for months and now I am using this tool for
 a few days now. Now I have all the tools that I have needed in order to utilize
 my workflow even more, a strong autocompletion tool such as Copilot, a program
 that allows me to interact with large language models through shell: llm, and
