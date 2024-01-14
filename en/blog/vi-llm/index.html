@@ -1,6 +1,6 @@
 <html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=1702857600"><title>Incorporating AI Tools Into My Terminal Workflow |
 rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><article><div class=page><h1>Incorporating AI Tools Into My Terminal Workflow</h1><i>Written at 2023-12-18
-- Updated at 2023-12-19</i><div>Discussions:
+- Updated at 2024-01-15</i><div>Discussions:
 <a href="https://news.ycombinator.com/item?id=38689075" target=_blank>(hackernews)</a></div><hr><p>For those who may not be aware, Neovim is to me what a lightsaber is to a Jedi.
 It forms an essential part of my routine, as I use it for nearly all my tasks
 involving text. Be it drafting an essay, sending an email, or coding, Neovim is
@@ -39,13 +39,13 @@ into another command or file.</p><h2 id=examples>Examples</h2><p>Here are some o
 </span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cat essay.txt | llm <span style=color:#e6db74>&#39;Summarize what these are about&#39;</span>
 </span></span></code></pre></div><p>Furthermore, if you keep finding yourself using the same prompts over and over
 again, you can create templates for them.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Create a template for finding synonyms of a word</span>
-</span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;What are the synonyms of &#34;$input&#34;&#39;</span> --save synonyms
+</span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;What are the synonyms of &#34;$input&#34;&#39;</span> --system --save synonyms
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Create a template for rephrasing text</span>
-</span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;Fix grammar mistakes and rephrase the text: &#34;$input&#34;&#39;</span> --save rephrase
+</span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;Fix grammar mistakes and rephrase the text: &#34;$input&#34;&#39;</span> --system --save rephrase
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Create a template for finding titles for given content</span>
-</span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;Recommend 5 titles for the following content: &#34;$input&#34;&#39;</span> --save titleize
+</span></span><span style=display:flex><span>llm <span style=color:#e6db74>&#39;Recommend 5 titles for the following content: &#34;$input&#34;&#39;</span> --system --save titleize
 </span></span></code></pre></div><p>You can later use these templates by passing the <code>-t</code> flag to the command.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Rephrase the text which are copiod in your clipboard</span>
 </span></span><span style=display:flex><span>xsel -b | llm -t rephrase
 </span></span><span style=display:flex><span>
