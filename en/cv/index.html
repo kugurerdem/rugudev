@@ -1,0 +1,170 @@
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Uğur Erdem Seyfi"><link rel=stylesheet href="/style.css?v=-62135596800"><title>CV |
+rugu</title></head><body><nav><a href=/>Home</a></nav><div class=master-container><div class=page><div style=text-align:center><p><a href=/en/#summary>Summary</a> |
+<a href=/en/#education>Education</a> |
+<a href=/en/#experience>Experience</a> |
+<a href=/en/#philosophy>Philosophy</a> |
+<a href=/en/#stack>Stack</a></p><p><strong>Uğur Erdem Seyfi</strong> (<a href=https://github.com/kugurerdem>GitHub</a>)</p></div><div style=text-align:center><h1 id=summary>Summary</h1></div><p>I am a <strong>full-stack software developer</strong> with an academic background of
+<strong>Mathematics</strong> and <strong>Computer Science</strong>. I mostly worked on financial
+technologies, but my experience is not limited to it. I have been
+professionally building Software Products for since 2021, yet my first
+introduction to Software Development can be traced back to my high school years
+in 2015.</p><p>I put a great importance on <strong>philosophy</strong>, particularly <strong>rational thinking</strong>.
+So, I give a lot importance to applying the tools used for rational thinking in
+the way I deliver products as well. See <a href=/en/cv/#philosophy>philosophy section</a> if
+you are interested in.</p><div style=text-align:center><h1 id=education>Education</h1></div><p>I studied <strong>Mathematics</strong> between <strong>2018 and 2022</strong> at <strong>Bilkent University</strong>,
+one of the most prestigious universities in Turkey. During my major, I
+completed the entire <strong>Computer Science</strong> curriculum through electives except
+for two courses I did not enroll - Operating Systems and Algorithms I.</p><div style=text-align:center><h1 id=experience>Experience</h1></div><hr><blockquote><div style=text-align:center><p><strong>Freelance Software Developer</strong> at <a href=https://www.spheraeng.com/>Sphera
+Engineering</a> (<strong>2023-12-13 / 2024-04</strong>)</p><blockquote><p>Sphera is an engineering company with crossover expertise in structural
+design and software development.</p></blockquote></div></blockquote><blockquote><p>Our job was to construct a <strong>backend infrastructure</strong> and create a simple,
+functional <strong>frontend</strong> that enables global and local administrators to
+manage designers, products, catalogs, etc. The most challenging part of the
+project was to make the authentication process to be SAML-compatible. In
+other words, <strong>we designed our backend to act as a SAML Service Provider</strong>
+and then integrated our app with <strong>Salesforce and Azure SAML IdP Services</strong>.</p></blockquote><blockquote><p><strong>Stack</strong>: Postgres, SAML Protocol, Javascript, React, Fastify, Heroku,
+Cloudflare Pages</p></blockquote><hr><blockquote><div style=text-align:center><p><strong>Freelance Software Developer</strong> at <a href=https://www.borsaistanbul.com/tr/sayfa/453/servis-saglayicilar>Blackwater Information Services</a> (<strong>2023-02-13 / 2023-12-29</strong>)</p><blockquote><p>BlackWater Information Services is a trading company located in Turkey.</p></blockquote></div></blockquote><blockquote><p>During my involvement in this project, I have made significant contributions
+in the process of developing <strong>NodeJS adaptors</strong> for <a href=https://www.borsaistanbul.com/en/sayfa/2537/itch-protocol>ITCH,
+GLIMPSE</a>, and
+<a href=https://www.borsaistanbul.com/en/sayfa/2535/ouch-protocol>OUCH</a> Socket
+Protocols, protocols which are commonly used in central exchanges such as
+Nasdaq and Borsa Istanbul (BIST) for facilitating high-frequency trading and
+market data transmission.</p></blockquote><blockquote><p><strong>We have successfully passed the BIST&rsquo;s OUCH Certification Exam using the
+adaptors we have developed</strong>, and as a result, the company was listed as one
+of the few <a href=https://www.borsaistanbul.com/en/sayfa/2557/service-vendors>OUCH Certified
+Applications</a>.</p></blockquote><blockquote><p>I have also made many important contributions regarding the clarifications of
+the <strong>trading algorithms</strong> which are built as well as <strong>building the
+infrastructure in which those algorithms could be easily implemented and put
+into practice</strong>. Unfortunately, I cannot talk much about the trading
+algorithms part itself as it is subject to NDA.</p></blockquote><blockquote><p>I have developed a <strong>REPL program</strong> to make it easier for users to test the
+algorithms and interface that we are building by easily placing orders and
+initiating trading algorithms.</p></blockquote><blockquote><p>I have also contributed to the process of building a <strong>desktop application</strong>
+which is supposed to be used as a replacing front-end alternative to the REPL
+program I mentioned above. The UI is designed so that it fits the specific
+needs of the traders.</p></blockquote><blockquote><p><strong>Stack</strong>: NodeJS, Sockets, ITCH, GLIMPSE and OUCH Protocols, SoupbinTCP, MoldUDP, Electron, React</p></blockquote><hr><blockquote><div style=text-align:center><p><strong>Freelance Software Developer</strong> at <a href=https://referencehood.com>Referencehood</a> (<strong>2023-01-20 / 2023-10-10</strong>)</p><blockquote><p>Referencehood is a referral platform that is founded by <a href="https://twitter.com/thebullduck?lang=en">Efe
+Bulduk</a>. It provides advantageous
+features for its users such as discounted fees or fee returns to those who
+register cryptocurrency exchanges using the site.</p></blockquote></div></blockquote><blockquote><p>I am familiar with all parts of the system which we have built as a team.
+This is not just limited to the frontend or backend but also
+administration, maintenance operations, and customer support. I have made
+significant contributions to the project to assist the team in enhancing all
+these aspects. These contributions include:</p></blockquote><blockquote><ul><li>Developing <strong>a system for Automatic Withdrawal</strong>, where withdrawal jobs are
+put into a <strong>Redis-based message queue</strong> as soon as the user creates a
+withdrawal request, and are handled by consumer processes. I have also
+implemented <strong>a notification system where GitHub issues are created</strong> in
+case programmatically unrecoverable errors occur (such as the balance of the
+wallet becoming insufficient).</li><li>Developing an <strong>Admin Panel</strong> that operators and the support team can use
+for looking at certain statistics as well as seeing user details.</li><li>Implementing the first version of the <strong>frontend</strong> which is now present in
+Referencehood, but modified a lot after.</li><li>Developing scripts and insfrastructure used for automatically <strong>parsing the
+reports</strong> obtained from the crypto exchanges. This includes a panel for
+operators to put the reports they obtained from exchanges as well as the
+scripts that parse those reports on the backend side.</li><li><strong>Migrating the database</strong> for improved balance calculation</li><li>Helping to improve some of the endpoints that are used in the <strong>public
+API</strong>.</li><li><strong>Developing generic exchange adaptors</strong> for different crypto exchanges
+such as Binance, Okex, and Bybit, to be later used in a <strong>sweeping process</strong>.</li></ul></blockquote><blockquote><p>I have also helped the Referencehood team with tasks which require soft skills
+as well, including:</p><ul><li>Helping the <strong>e-mail support team</strong> on their way to answer customers, as
+well as answering stuff by myself from time to time.</li><li>Improving some of the <strong>FAQ entries</strong>.</li><li>Interacting with some of the exchange representatives during the
+integration periods.</li></ul></blockquote><blockquote><p><strong>Stack</strong>: Postgres, LevelDB, Redis, bullMQ, NodeJS, Fastify, React, Heroku, Cloudflare Pages</p></blockquote><hr><blockquote><div style=text-align:center><p>Part-time <strong>Full-Stack Developer</strong> at <a href=https://linktr.ee/metavestapp>Metavest</a> (<strong>2021-10 / 2022-08</strong>)</p><blockquote><p>Metavest was a project backed by <a href=https://www.bilira.co/>BiLira</a>, the
+company which issued the first stable coin (TRYB) in Turkey. The project
+intended to become a cryptobank providing a high-quality mobile finance
+experience for all.</p></blockquote></div></blockquote><blockquote><p>My major responsibility in this project was to build a monitoring system
+called “DefiTracker” which esentially aggregates data from different kinds of
+DeFi platforms, later to be served on a panel built on Retool.</p><p>I was also involved in the process of onboarding new members to DeFi
+ecosystem.</p></blockquote><blockquote><p><strong>Stack</strong>: NodeJS, Redis, MongoDB, Web3 Libraries (such as ethers.js), Grafana, Retool, Docker</p></blockquote><hr><blockquote><div style=text-align:center><p><strong>Software Developer Intern</strong> at <a href=https://www.meteksan.com/en>Meteksan Defense</a> (2021-06 / 2021-07)</p><blockquote><p>Meteksan Savunma is a Turkish defense technology company, specializing in
+radar systems, perimeter surveillance systems, laser and electro-optic
+systems, communication systems, underwater acoustic systems and simulators.</p></blockquote></div></blockquote><blockquote><p>I spent my time during my internship period at Meteksan by mostly focusing on
+learning certain areas and concepts such as <strong>C++</strong>, <strong>socket programming</strong>,
+<strong>multi-threading</strong>, <strong>machine-learning</strong> and <strong>computer vision</strong>. I have
+created a simple multi-client server network insfracture incorporating the
+things I learned about sockets and threads. On later periods of my
+internship, I delved into <strong>Machine Learning</strong>, with a particular emphasis on
+<strong>Computer Vision</strong>, <strong>built a simple AI program which recognizes the MNIST
+numbers.</strong></p></blockquote><blockquote><p><strong>Stack</strong>: C++, Socket Programming, Threads, Python, PyTorch</p></blockquote><div style=text-align:center><h1 id=philosophy>Philosophy</h1></div><h2 id=no-silver-bullet>No Silver Bullet</h2><p>Most problems of software development occur because developers not being
+able to distinguish essential complexity from accidental complexity. Try to
+oversimplify a problem, and you fail. Solve problems by favoring complex
+tools and patterns, and you create technical debt for the future.</p><p>Software Developers frequently find themselves at a point where they are no
+longer trying to solve the essential complexities regarding a particular
+problem but the problems arise from accidental complexities created by
+others, and sometimes themselves. The important thing to note here is that
+there is <a href=https://en.wikipedia.org/wiki/No_Silver_Bullet>No Silver
+Bullet</a>.</p><h2 id=keep-it-simple-stupid>Keep it Simple, Stupid!</h2><p>No, using frameworks and tools without properly understanding the essential
+complexities which they are supposed to solve is not going to help as they
+often introduce problems on their own. <strong>What is lacking in the industry is not
+people being able to use XYZ framework but rather having a good understanding
+of the fundamentals.</strong> This is not to say that we should never use frameworks,
+but rather we should know when to <a href=https://blog.boot.dev/webdev/put-that-framework-down/>put that framework down before someone gets
+hurt</a> as well as when to
+use them so that we are not building <a href=https://www.arp242.net/stupid-light.html>stupid light
+software</a> in the pursuit of being
+suckless.</p><p>Understanding the fundamentals is essential. But it is never enough by
+itself for avoiding accidental complexities. It is quite common for smart
+individuals to create and solve complex problems not because it benefit the
+business, but simply because they enjoy it. This is why I see a great value
+in reminding ourselves the principles such as
+<a href=https://en.wikipedia.org/wiki/KISS_principle>KISS</a> or <a href=https://en.wikipedia.org/wiki/Less_is_more>Less is
+More</a>. Sometimes, being not so
+smart, or <a href=https://antonz.org/stupid/>being a stupid progammer</a> can lead
+to a more understandable code. Remember Tony Hoare saying &lsquo;Premature
+optimization is the root of all evil in programming.&rsquo;</p><h2 id=choosing-boring-technology>Choosing Boring Technology</h2><p>There is another lesson which I think is very important regarding this
+matter. That is the ability to distinguish non-perishable knowledge from
+<a href=https://www.lesswrong.com/posts/L6iFpR9ZyTmzHvYci/perishable-knowledge>perishable
+knowledge</a>.
+In many cases, &lsquo;smart&rsquo; software developers lean towards using fancy tools
+which are new and cutting edge when there are already technologies which
+are battle tested for long periods of time, and known to be working well
+for many cases. Most of the time it&rsquo;s just a better investment for your
+business to <a href=https://mcfunley.com/choose-boring-technology>choose boring
+technology</a> over the
+ones which are fancy (and marketed well) but not battle-tested enough.
+See <a href=https://en.wikipedia.org/wiki/Lindy_effect>Lindy Effect</a>.</p><p>There also seem to be great amount of acumulated knowledge which are
+available with &lsquo;boring technologies&rsquo; which we could benefit from a lot.</p><h2 id=unix-philosophy>UNIX Philosophy</h2><p>Hackers from previous generations accumulated a vast amount of knowledge of
+many things. One such example that we could greatly benefit from is the <a href=https://en.wikipedia.org/wiki/Unix_philosophy>UNIX
+philosophy</a>. Understanding that
+most of the problems we face today in computer use have already been discussed
+and often solved can influence how we use our computers.</p><h2 id=mindful-communication>Mindful Communication</h2><p>While working on projects, it&rsquo;s important to apply your soft skills as much as
+your technical abilities. It&rsquo;s quite common for developers to face problems
+that could easily be overcome by communicating with customers, product
+managers, and team members. But they often prefer not to do so. This is often
+the reason why product managers find themselves in a place where they need to
+force developers to attend meetings in order to sync with them. The key thing
+to understand here is that both situations could essentially be avoided simply
+by developers learning to become a <a href=https://dev.37signals.com/the-radiating-programmer/>radiating
+programmer</a>, a programmer
+which radiates information as a habit.</p><div style=text-align:center><h1 id=stack>Stack</h1></div><p>I am always open to learning and adding new technologies to my stack. But, here
+are the technologies which I am most familiar with.</p><hr><h3 id=programming-languages>Programming Languages</h3><p><strong>Javascript</strong> is the programming language which I am most familiar with. I’ve
+been using it since high school, both for recreational and professional tasks.
+Having said this, I have also used programming languages such as <strong>Python,
+Java, C++, C</strong> in the past, both for university projects as well as
+recreational purposes. So, I have some familiarity with them to some extent as
+well.</p><p>I use <strong>Bash</strong> pretty much regularly on my own operating system as well as the
+systems I administrate.</p><p>I am also familiar with descriptive languages such as <strong>SQL</strong> and am interested
+in functional programming languages such as <strong>Haskell</strong> and <strong>Clojure</strong>.</p><hr><h3 id=frameworks-and-libraries>Frameworks and Libraries</h3><p>You can view the frameworks and libraries I&rsquo;ve worked with for each language.
+Click on the collapsible sections below corresponding to the programming
+language you&rsquo;re interested in:</p><blockquote><details><summary>Javascript</summary><p><strong>Frontend</strong></p><ul><li><p>The frontend framework I am familiar the most is <strong>React</strong>. I have used
+react with complementary libraries such as <strong>React Query, React Router5</strong>
+and <strong>Zustand</strong>.</p></li><li><p>As a more lightweight alternative to React for simpler frontends, I use
+<strong>hyperscript, hyperscript-helpers</strong> libraries.</p></li><li><p>To build statistics charts, I opt for victory if I am using React. If not, a
+lightweight library such as shown will suffice.</p></li></ul><p><strong>Backend</strong>:</p><ul><li><p>For backend, I have used <strong>Fastify</strong> as a web framework with plugins such as
+<strong>fastify-cors, fastify-rate-limit, fastify-swagger</strong>.</p></li><li><p><strong>jsonwebtoken</strong>, is a very well known npm package used for handling JWT
+tokens. So, I use this as well.</p></li><li><p>I have also used <strong>formidable</strong> to parse HTTP request form datas that
+especially contain file uploads.</p></li><li><p>As a Database client library for Postgres, I have tried the following ones:
+<strong>pg, postgres, massiveJS</strong> and found <strong>pg</strong> the one which provides the most
+power whereas <strong>massiveJS</strong> makes the process of writing code more
+convenient.</p></li><li><p>If using a database such as Postgres, or even SQLite becomes an overkill, and
+saving stuff in a key/value structure is sufficient, using <strong>classic-level</strong>
+npm package for using LevelDB might be a good idea.</p></li><li><p>I have used <strong>bullMQ</strong> when I needed a message queue. It met my needs.</p></li></ul><p><strong>Developer Dependencies</strong>:</p><ul><li><p>My favorite choice of javascript linter is <strong>Eslint</strong>.</p></li><li><p>I have also used the following developer dependencies from time to time for
+different purposes: <strong>parcel, vite, heroku, wrangler, nodemon, patch,
+pino-pretty</strong></p></li></ul><p><strong>Other Libraries</strong>:</p><ul><li><p><strong>Lodash</strong> is one of the utility libraries that I find pretty usefull,
+especially for transforming data from one form into another.</p></li><li><p>I strongly prefer libraries such as <strong>bignumber.js</strong> for dealing with
+arithmetic operations for critical tasks rather than using JavaScript’s own
+methods.</p></li><li><p>The library <strong>minimist</strong> is a good option for building CLI programs with
+simple argument mechanisms.</p></li><li><p>I use <strong>nanoid</strong> to create unique identifiers in the same process.</p></li><li><p><strong>async-retry</strong> is another library that I find very helpful for implementing
+asynchronous retry logic, which is sometimes needed.</p></li><li><p>I have also used libraries such as <strong>csv-parse, csv-stringify, unzipper,
+xlsx</strong> for parsing different files. They were fine, overall.</p></li><li><p>I have used both <strong>ethers.js</strong> and <strong>web3.js</strong> for interacting with EVM
+Compatible Blockchains. I found the interface, documentation and the ease of
+use of ethers.js much better than web3.js. For the Tron blockchain,
+<strong>tronweb</strong> library worked fine for me.</p></li></ul></details></blockquote><hr><h3 id=databases>Databases</h3><p>For storing business critical data, I opt for relational databases such as
+<strong>PostgreSQL</strong> over the ones that force you to implement the business logic in
+the application layer (such as <strong>MongoDB</strong>).</p><p>I have also used databases such as <strong>Redis</strong>, <strong>LevelDB</strong> and <strong>Prometheus</strong> in
+the past as well.</p><hr><h3 id=version-control-system>Version Control System</h3><p>I am familiar with <strong>git</strong> to the point that I do everything related to git via
+its CLI.</p><hr><h3 id=cloud>Cloud</h3><p>I have used <strong>Heroku</strong> as a Cloud Application Platform. <strong>I also configured and
+maintained servers by myself to host applications.</strong></p><hr><h3 id=unix-tools>UNIX Tools</h3><p>Thanks to my daily exposure to consequences of using a minimal Linux distro as
+a desktop computer, I am quite familiar with lots of different UNIX tools. :)</p></div></div></body><html>
