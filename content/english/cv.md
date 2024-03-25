@@ -18,16 +18,35 @@ layout: cv
 {{< /center >}}
 
 I am a **full-stack software developer** with an academic background of
-**Mathematics** and **Computer Science**. I mostly worked on financial
-technologies, but my experience is not limited to it. I have been
-professionally building Software Products for since 2021, yet my first
-introduction to Software Development can be traced back to my high school years
-in 2015.
+**Mathematics** and **Computer Science**. I have been professionally building
+Software Products for **since 2021**, yet my first introduction to Software
+Development can be traced back to my high school years in 2015.
 
-I put a great importance on **philosophy**, particularly **rational thinking**.
-So, I give a lot importance to applying the tools used for rational thinking in
-the way I deliver products as well. See [philosophy section](#philosophy) if
-you are interested in.
+I mainly have [experience](#experience) working with
+financial tech apps, from their early stages to their more
+stable phases. I've primarily used **NodeJS and its
+ecosystem libraries/frameworks**, in addition to databases
+like **PostgreSQL, Redis, LevelDB, and MongoDB**. I'm quite
+familiar with tools such as **git** and I've been using the
+**a Linux Distribution** as my primary operating system
+since 2021. I feel comfortable building apps from scratch
+with these tools. However, I am not strictly confined to
+using this [stack](#stack) and I am always open to learning
+new technologies. I believe that my understanding of the
+fundamentals makes it easier for me to learn the right
+tools when necessary.
+
+To give you a more idea about me, I am your typical software developer with a
+hacker's mindset. I delve deeper into the technologies I use and their
+underlying philosophies. I use **Arch Linux** as my desktop computer, use
+**Vim** to edit and write text, spend time on [Hacker
+News](https://news.ycombinator.com/user?id=kugurerdem), and write regularly. I
+highly value **philosophy**, particularly **rational
+thinking**. **I think having a proper understanding of the
+fundamentals of this industry is a way more valuable skill
+than to know XYZ framework**. I find it a requirement for
+success to have a [philosophy](#philosophy) of doing things
+for delivering products.
 
 {{< center >}}
 # Education
