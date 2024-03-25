@@ -11,6 +11,7 @@ params:
     - hackernews: 'https://news.ycombinator.com/user?id=kugurerdem'
     - rss: '/en/index.xml'
   email: "ugur@rugu.dev"
+  author: "Uğur Erdem Seyfi"
 
 defaultContentLanguageInSubdir: true
 languages:
@@ -19,16 +20,20 @@ languages:
     languageName: English
     weight: 0
     params:
-      descriptions: ["A software developer with a hacker's attitude", "developer @ lab.gwn.wtf", "dives.fyi cofounder", "BSc Math '23", "interested in phil and psyc"]
-      description: "a software developer with a hacker's attitude, dev at lab.gwn.wtf, BSc Math '23, interested in philosophy and psychology, dives.fyi cofounder"
+      description: "A software developer with a hacker's attitude, interested in philosophy and psychology"
       menu:
         home: 'Home'
+        wisdom: 'Wisdom'
+      contact: 'Contact'
+      collaborate: "See my [CV](/en/cv) to decide if you want to work with me."
 
   tr:
     contentDir: content/turkce
     languageName: Turkce
     weight: 1
     params:
-      description: "hacker kafalı yazılımcı, matematik mezunu '23, lab.gwn.wtf'de geliştirici, felsefe ve psikoloji ile ilgileniyor, dives.fyi eşkurucusu"
+      description: "hacker kafalı yazılımcı, matematik mezunu '23, felsefe ve psikoloji ile ilgileniyor"
       menu:
         home: 'Anasayfa'
+        wisdom: 'Bilgelik'
+      contact: 'İletişim'

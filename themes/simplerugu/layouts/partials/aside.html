@@ -1,8 +1,11 @@
 <aside class="side">
-        <img
-            class="author-image"
-            src="{{.Site.Params.AuthorImage}}"/>
+    <img
+        class="author-image"
+        src="{{.Site.Params.AuthorImage}}"/>
 
+    <div style="text-align: center;">
+        <b> {{ .Site.Params.Author }} </b>
+    </div>
     <hr/>
     <div class="icon-container">
     {{ range .Site.Params.Connect }}
@@ -16,5 +19,7 @@
     <hr/>
         <div> {{ .Site.Params.Description }} </div>
     <hr/>
-    <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
+    {{ .Site.Params.Contact}}: <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
+    <hr/>
+    {{ .Site.Params.Collaborate | markdownify }}
 </aside>
